@@ -9,7 +9,7 @@ from lxml import html as lxml_html
 
 from odoo.tests.common import TransactionCase
 
-from odoo.addons.website_sale_low_stock_urgency.tests.common import (
+from odoo.addons.bs_low_stock_urgency.tests.common import (
     storable_product_values,
 )
 
@@ -64,7 +64,7 @@ class LowStockCartCase(TransactionCase):
 
     def _badge(self, line):
         markup = self.env["ir.qweb"]._render(
-            "website_sale_low_stock_urgency.low_stock_badge", {"badge_source": line})
+            "bs_low_stock_urgency.low_stock_badge", {"badge_source": line})
         if not str(markup).strip():
             return None
         tree = lxml_html.fromstring(markup)
