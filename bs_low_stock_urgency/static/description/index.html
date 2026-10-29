@@ -1,0 +1,48 @@
+<div style="max-width:880px;margin:0 auto;padding:8px 4px 24px;color:#2b2b2b;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.65">
+<div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#017E84;font-weight:600">Odoo &#183; Website / eCommerce</div>
+<div style="font-size:38px;line-height:1.2;margin:10px 0 14px;font-weight:700">Low Stock Urgency Badges</div>
+<div style="font-size:18px;color:#6b6b6b;margin:0 0 20px;max-width:660px">When two of something are left, the shop should say so &mdash; quietly, in the same place on every page, and without repeating the stock line the customer has already read.</div>
+
+<div style="margin:0 0 4px"><span style="display:inline-block;font-size:12.5px;padding:5px 12px;border-radius:999px;background:#faf7f8;border:1px solid #e7e3e5;color:#524a4f;margin:0 8px 8px 0;white-space:nowrap">website_sale_stock</span><span style="display:inline-block;font-size:12.5px;padding:5px 12px;border-radius:999px;background:#faf7f8;border:1px solid #e7e3e5;color:#524a4f;margin:0 8px 8px 0;white-space:nowrap">Product &#183; category &#183; website</span><span style="display:inline-block;font-size:12.5px;padding:5px 12px;border-radius:999px;background:#faf7f8;border:1px solid #e7e3e5;color:#524a4f;margin:0 8px 8px 0;white-space:nowrap">OPL-1</span></div>
+
+<div style="display:flex;flex-wrap:wrap;gap:16px;margin:36px 0 8px">
+<div style="flex:1 1 220px;min-width:200px;border:1px solid #e7e3e5;border-radius:10px;padding:20px;background:#fff"><div style="font-size:15px;font-weight:600;margin:0 0 6px">The sellable number</div><div style="font-size:13.5px;color:#6b6b6b">Ten on the shelf with eight already promised is two left, and that is what the badge says. On-hand stock is not the number a customer can buy.</div></div>
+<div style="flex:1 1 220px;min-width:200px;border:1px solid #e7e3e5;border-radius:10px;padding:20px;background:#fff"><div style="font-size:15px;font-weight:600;margin:0 0 6px">One rule, three surfaces</div><div style="font-size:13.5px;color:#6b6b6b">Product page, shop grid and cart all read the same threshold and the same sentence, so a customer never sees two different counts for one product.</div></div>
+<div style="flex:1 1 220px;min-width:200px;border:1px solid #e7e3e5;border-radius:10px;padding:20px;background:#fff"><div style="font-size:15px;font-weight:600;margin:0 0 6px">An urgent second wording</div><div style="font-size:13.5px;color:#6b6b6b">A tighter threshold can switch the badge to a second sentence &mdash; a number at five, just "Last few" at two.</div></div>
+</div>
+
+<div style="font-size:22px;font-weight:700;margin:52px 0 4px">Where the threshold comes from</div>
+<div style="font-size:14px;color:#3f3f3f;margin-top:10px">One number, in three places. A value of <strong>0</strong> is not "off"; it is "ask the next place".</div>
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:10px"><tbody>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Product</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">On the product form under <em>Sales &#8250; Website Low Stock Badge</em>. Wins whenever it is above zero.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Public category</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">On <em>Website &#8250; Configuration &#8250; Product Categories</em>. The nearest category with a value answers; its parents are next, then the site.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Website</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">On the website form, under <em>Low Stock Badge</em>. Also holds the two sentences and the urgent threshold.</td></tr>
+</tbody></table>
+
+<div style="font-size:22px;font-weight:700;margin:48px 0 4px">What a customer sees</div>
+<div style="display:flex;flex-wrap:wrap;gap:0 28px;margin-top:6px">
+<div style="flex:1 1 300px;min-width:260px;font-size:14px;padding:8px 0"><span style="color:#017E84;font-weight:700;margin-right:9px">&#10003;</span>On the product page the badge sits under the availability line, from the same variant information the page already renders</div>
+<div style="flex:1 1 300px;min-width:260px;font-size:14px;padding:8px 0"><span style="color:#017E84;font-weight:700;margin-right:9px">&#10003;</span>On the shop grid it appears under the product name, on the tile whose first variant is low</div>
+<div style="flex:1 1 300px;min-width:260px;font-size:14px;padding:8px 0"><span style="color:#017E84;font-weight:700;margin-right:9px">&#10003;</span>In the cart each line states its own variant's count, so two sizes of one product can show two different numbers</div>
+<div style="flex:1 1 300px;min-width:260px;font-size:14px;padding:8px 0"><span style="color:#017E84;font-weight:700;margin-right:9px">&#10003;</span>The sentence is per website and translatable; <strong>{qty}</strong> is replaced with the number, and the urgent sentence may leave it out</div>
+</div>
+
+<div style="font-size:22px;font-weight:700;margin:48px 0 4px">What it will not say</div>
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:10px"><tbody>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Not tracked</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">A service or a consumable that does not manage stock never carries a scarcity badge, whatever its category says.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Above the threshold</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">At the threshold the badge appears; one unit above it, nothing. There is no "almost low" state.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Nothing left</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">Zero is the out-of-stock line's business. "Only 0 left" is not a scarcity message, it is the sentence above it with a number.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">The same words twice</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">If the configured badge would repeat the stock sentence word for word, it is dropped instead of printed twice.</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Threshold zero</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">A site that sets no threshold gets no badge at all &mdash; no extra markup, no empty element on the page.</td></tr>
+</tbody></table>
+
+<div style="font-size:22px;font-weight:700;margin:48px 0 4px">Technical details</div>
+<table style="width:100%;border-collapse:collapse;font-size:14px"><tbody>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Depends on</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">website_sale, website_sale_stock</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">License</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">OPL-1</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Quantity source</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">The variant's <code>free_qty</code>, read through the ORM</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Configure</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">Product form &#8250; Sales; Website &#8250; Configuration &#8250; Product Categories; Website &#8250; Configuration &#8250; Settings &#8250; Low Stock Badge</td></tr>
+<tr><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5;background:#faf7f8;font-weight:600;color:#524a4f;width:34%">Install</td><td style="padding:10px 12px;border-bottom:1px solid #e7e3e5">Apps &#8594; Update Apps List &#8594; search &#8220;Low Stock Urgency&#8221; &#8594; Install</td></tr>
+</tbody></table>
+<div style="border-top:1px solid #e7e3e5;margin-top:44px;padding-top:14px;font-size:12.5px;color:#8a8189">bs_low_stock_urgency &#183; ModForge</div>
+</div>
