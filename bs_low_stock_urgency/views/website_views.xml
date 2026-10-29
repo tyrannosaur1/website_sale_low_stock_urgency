@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The numbers are per product; how the site speaks about them is per
+         website, and translatable. 13.0 has no notebook on the website form
+         yet, so the block is a group after the last one on the sheet. -->
+    <record id="view_website_form_low_stock_urgency" model="ir.ui.view">
+        <field name="name">website.form.low.stock.urgency</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='other']" position="after">
+                <group string="Low Stock Badge" name="low_stock_urgency">
+                    <group string="When to show it">
+                        <field name="low_stock_threshold"/>
+                        <field name="low_stock_critical_threshold"/>
+                    </group>
+                    <group string="What it says">
+                        <field name="low_stock_badge_text"
+                               placeholder="e.g. Only {qty} left"/>
+                        <field name="low_stock_badge_critical_text"
+                               placeholder="e.g. Last few"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
