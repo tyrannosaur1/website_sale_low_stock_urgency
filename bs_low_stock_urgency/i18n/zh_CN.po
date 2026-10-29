@@ -1,0 +1,142 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bs_low_stock_urgency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20250909\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-29 05:22+0000\n"
+"PO-Revision-Date: 2026-10-29\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_badge_text
+msgid "Badge Text"
+msgstr "徽章文本"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "Low Stock Badge"
+msgstr "低库存徽章"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_public_category__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_template__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_threshold
+msgid "Low Stock Threshold"
+msgstr "低库存阈值"
+
+#. module: bs_low_stock_urgency
+#: model:ir.module.module,shortdesc:base.module_bs_low_stock_urgency
+msgid "Low Stock Urgency Badges"
+msgstr "低库存紧迫感徽章"
+
+#. module: bs_low_stock_urgency
+#. odoo-python
+#: code:addons/bs_low_stock_urgency/models/low_stock.py:0
+msgid "Only %(qty)s %(uom)s left in stock."
+msgstr "仅剩 %(qty)s %(uom)s 库存。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_template
+msgid "Product"
+msgstr "产品"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_product
+msgid "Product Variant"
+msgstr "产品变体"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "销售订单行"
+
+#. module: bs_low_stock_urgency
+#: model:ir.module.module,summary:base.module_bs_low_stock_urgency
+msgid "Show a configurable scarcity badge on the product page, the shop grid and the cart when a variant's sellable quantity reaches a threshold."
+msgstr "当变体的可售数量降到阈值时，在产品页、商店列表和购物车中显示可配置的紧缺徽章。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_public_category__low_stock_threshold
+msgid "Show the scarcity badge for products in this category when their sellable quantity is at or below this number. 0 passes the question to the parent category and then to the website."
+msgstr "当此分类下产品的可售数量等于或低于此数值时，显示紧缺徽章。填 0 则由上级分类决定，再回退到网站设置。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_template__low_stock_threshold
+msgid "Show the scarcity badge when this product's sellable quantity is at or below this number. 0 inherits the public category, which in turn inherits the website. The badge never appears for products whose stock is not tracked."
+msgstr "当此产品的可售数量等于或低于此数值时，显示紧缺徽章。填 0 则继承公开分类，再继承网站设置。不跟踪库存的产品永不显示该徽章。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_threshold
+msgid "Site-wide default for the scarcity badge. A product or its public category can set its own number; 0 here means the badge is off for products that do not set one."
+msgstr "紧缺徽章的站点级默认值。产品或其公开分类可自行设置数值；此处填 0 表示未单独设置的产品不显示徽章。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_badge_text
+msgid "Text of the scarcity badge. {qty} is replaced with the sellable quantity. Leave empty for the default wording."
+msgstr "紧缺徽章的文本。{qty} 会替换为可售数量。留空则使用默认文案。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_badge_critical_text
+msgid "Text used at or below the urgent threshold. {qty} is optional here: an urgent badge often names no number at all."
+msgstr "等于或低于紧急阈值时使用的文本。此处 {qty} 为可选项：紧急徽章往往不写具体数字。"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_badge_critical_text
+msgid "Urgent Badge Text"
+msgstr "紧急徽章文本"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_critical_threshold
+msgid "Urgent Threshold"
+msgstr "紧急阈值"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_website
+msgid "Website"
+msgstr "网站"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.product_template_form_view_low_stock_threshold
+msgid "Website Low Stock Badge"
+msgstr "网站低库存徽章"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_public_category
+msgid "Website Product Category"
+msgstr "网站产品目录"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "What it says"
+msgstr "显示内容"
+
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_critical_threshold
+msgid "When the sellable quantity is at or below this tighter number, the urgent text is used instead of the regular one. 0 keeps a single text for every badge."
+msgstr "当可售数量等于或低于此更严格的数值时，使用紧急文本代替常规文本。填 0 则所有徽章使用同一文本。"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "When to show it"
+msgstr "显示时机"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "e.g. Last few"
+msgstr "例如：仅剩几件"
+
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "e.g. Only {qty} left"
+msgstr "例如：仅剩 {qty}"
