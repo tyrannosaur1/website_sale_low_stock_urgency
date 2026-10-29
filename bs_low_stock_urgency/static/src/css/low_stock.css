@@ -1,0 +1,22 @@
+.o_wslsu_wrap {
+    line-height: 1.2;
+}
+
+.o_wslsu_badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid #f0c36d;
+    border-radius: 0.25rem;
+    background: #fff8e5;
+    color: #8a5a00;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.o_wslsu_badge_critical {
+    border-color: #e5a3a3;
+    background: #fdecec;
+    color: #a12626;
+}
