@@ -11,7 +11,7 @@ from lxml import html as lxml_html
 
 from odoo.tests.common import HttpCase
 
-from odoo.addons.website_sale_low_stock_urgency.tests.common import (
+from odoo.addons.bs_low_stock_urgency.tests.common import (
     storable_product_values,
 )
 

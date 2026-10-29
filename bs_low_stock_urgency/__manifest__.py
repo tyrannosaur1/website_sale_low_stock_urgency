@@ -17,7 +17,7 @@
     ],
     "assets": {
         "web.assets_frontend": [
-            "website_sale_low_stock_urgency/static/src/css/low_stock.css",
+            "bs_low_stock_urgency/static/src/css/low_stock.css",
         ],
     },
     "installable": True,
