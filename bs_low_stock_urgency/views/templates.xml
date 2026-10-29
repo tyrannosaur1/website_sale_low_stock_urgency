@@ -39,7 +39,7 @@
         <xpath expr="//*[hasclass('o_wsale_products_item_title')]" position="after">
             <div class="o_wslsu_wrap mt-1">
                 <t t-set="badge_source" t-value="product"/>
-                <t t-call="website_sale_low_stock_urgency.low_stock_badge"/>
+                <t t-call="bs_low_stock_urgency.low_stock_badge"/>
             </div>
         </xpath>
     </template>
@@ -51,7 +51,7 @@
         <xpath expr="//td[hasclass('td-qty')]" position="inside">
             <div class="o_wslsu_wrap mt-1">
                 <t t-set="badge_source" t-value="line"/>
-                <t t-call="website_sale_low_stock_urgency.low_stock_badge"/>
+                <t t-call="bs_low_stock_urgency.low_stock_badge"/>
             </div>
         </xpath>
     </template>
