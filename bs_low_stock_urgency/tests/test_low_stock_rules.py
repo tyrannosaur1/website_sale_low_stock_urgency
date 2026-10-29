@@ -8,11 +8,11 @@ prints on the same page.
 """
 from odoo.tests.common import TransactionCase
 
-from odoo.addons.website_sale_low_stock_urgency.models.low_stock import (
+from odoo.addons.bs_low_stock_urgency.models.low_stock import (
     is_stock_tracked,
     normalize,
 )
-from odoo.addons.website_sale_low_stock_urgency.tests.common import (
+from odoo.addons.bs_low_stock_urgency.tests.common import (
     storable_product_values,
     untracked_product_values,
 )
