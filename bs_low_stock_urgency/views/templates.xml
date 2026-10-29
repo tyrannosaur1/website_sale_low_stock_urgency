@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- 10.0 has no `assets` manifest key: the stylesheet is appended to the
+         frontend bundle from a template. -->
+    <template id="assets_frontend" inherit_id="website.assets_frontend"
+              name="Low Stock Urgency Badges">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/css"
+                  href="/bs_low_stock_urgency/static/src/css/low_stock.css"/>
+        </xpath>
+    </template>
+
+    <!-- The badge itself, in one place. `badge_source` is a product.product
+         or a sale.order.line; both answer `_low_stock_badge_values()`, so
+         the surfaces cannot disagree about the wording or the number.
+         Passed as a `t-set` before the call: body variables stay in the
+         caller's scope and never reach the called template. -->
+    <template id="low_stock_badge" name="Low Stock Badge">
+        <t t-set="badge_values" t-value="badge_source._low_stock_badge_values()"/>
+        <span t-if="badge_values['low_stock_badge_text']"
+              t-attf-class="o_wslsu_badge {{'o_wslsu_badge_critical' if badge_values['low_stock_badge_critical'] else ''}}"
+              t-att-data-low-stock-qty="badge_values['low_stock_badge_qty']"
+              role="status"
+              t-esc="badge_values['low_stock_badge_text']"/>
+    </template>
+
+    <!-- Product page: under the add-to-cart button, above the availability
+         alert core renders below the form. 10.0 has no
+         `div.availability_messages` and no `product_variant` in the page
+         context, so the badge asks `product.product_variant_id`. -->
+    <template id="product_low_stock_badge" inherit_id="website_sale.product"
+              name="Low Stock Badge on Product">
+        <xpath expr="//a[@id='add_to_cart']" position="after">
+            <div t-if="product.product_variant_id" class="o_wslsu_wrap small mt8" role="note">
+                <t t-set="badge_source" t-value="product.product_variant_id"/>
+                <t t-call="bs_low_stock_urgency.low_stock_badge"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Shop grid: under the product name on the tile, above the price. The
+         tile speaks for the product's first variant, the one it opens with. -->
+    <template id="products_item_low_stock_badge" inherit_id="website_sale.products_item"
+              name="Low Stock Badge on Tile">
+        <xpath expr="//div[@itemprop='offers']" position="before">
+            <div class="o_wslsu_wrap mt-1">
+                <t t-set="badge_source" t-value="product"/>
+                <t t-call="bs_low_stock_urgency.low_stock_badge"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Cart: 10.0 renders the cart as a table and gives the quantity cell an
+         id rather than a class. -->
+    <template id="cart_line_low_stock_badge" inherit_id="website_sale.cart_lines"
+              name="Low Stock Badge in Cart">
+        <xpath expr="//td[@id='td-qty']" position="inside">
+            <div class="o_wslsu_wrap mt-1">
+                <t t-set="badge_source" t-value="line"/>
+                <t t-call="bs_low_stock_urgency.low_stock_badge"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
