@@ -6,6 +6,7 @@
                "shop grid and the cart when a variant's sellable quantity "
                "reaches a threshold.",
     "author": "ModForge",
+        "images": ["static/description/screenshot_1.png", "static/description/screenshot_2.png"],
     "license": "OPL-1",
     "category": "Website/Website",
     "depends": ["website_sale", "website_sale_stock"],
