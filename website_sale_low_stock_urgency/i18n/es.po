@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_sale_low_stock_urgency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-29 05:28+0000\n"
+"PO-Revision-Date: 2026-10-29\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: website_sale_low_stock_urgency
+#. odoo-python
+#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+msgid "%(qty)s %(uom)s in stock"
+msgstr "%(qty)s %(uom)s en stock"
+
+#. module: website_sale_low_stock_urgency
+#. odoo-python
+#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+msgid "%(qty)s in stock"
+msgstr "%(qty)s en stock"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_badge_text
+msgid "Badge Text"
+msgstr "Texto de la insignia"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_product__display_name
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_public_category__display_name
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_template__display_name
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_product__id
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_public_category__id
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_template__id
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_sale_order_line__id
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "Low Stock Badge"
+msgstr "Insignia de stock bajo"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_public_category__low_stock_threshold
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_template__low_stock_threshold
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_threshold
+msgid "Low Stock Threshold"
+msgstr "Umbral de stock bajo"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.module.module,shortdesc:base.module_website_sale_low_stock_urgency
+msgid "Low Stock Urgency Badges"
+msgstr "Insignias de urgencia por stock bajo"
+
+#. module: website_sale_low_stock_urgency
+#. odoo-python
+#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+msgid "Only %(qty)s %(uom)s left in stock."
+msgstr "Solo quedan %(qty)s %(uom)s en stock."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model,name:website_sale_low_stock_urgency.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model,name:website_sale_low_stock_urgency.model_product_product
+msgid "Product Variant"
+msgstr "Variante de producto"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model,name:website_sale_low_stock_urgency.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.module.module,summary:base.module_website_sale_low_stock_urgency
+msgid "Show a configurable scarcity badge on the product page, the shop grid and the cart when a variant's sellable quantity reaches a threshold."
+msgstr "Muestra una insignia de escasez configurable en la ficha del producto, la cuadrícula de la tienda y el carrito cuando la cantidad vendible de una variante alcanza un umbral."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_public_category__low_stock_threshold
+msgid "Show the scarcity badge for products in this category when their sellable quantity is at or below this number. 0 passes the question to the parent category and then to the website."
+msgstr "Muestra la insignia de escasez para los productos de esta categoría cuando su cantidad vendible sea igual o inferior a este número. 0 traslada la decisión a la categoría padre y luego al sitio web."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_template__low_stock_threshold
+msgid "Show the scarcity badge when this product's sellable quantity is at or below this number. 0 inherits the public category, which in turn inherits the website. The badge never appears for products whose stock is not tracked."
+msgstr "Muestra la insignia de escasez cuando la cantidad vendible de este producto sea igual o inferior a este número. 0 hereda la categoría pública, que a su vez hereda el sitio web. La insignia nunca aparece en productos cuyo stock no se controla."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_threshold
+msgid "Site-wide default for the scarcity badge. A product or its public category can set its own number; 0 here means the badge is off for products that do not set one."
+msgstr "Valor predeterminado del sitio para la insignia de escasez. Un producto o su categoría pública pueden fijar su propio número; 0 aquí desactiva la insignia para los productos que no fijan uno."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_badge_text
+msgid "Text of the scarcity badge. {qty} is replaced with the sellable quantity. Leave empty for the default wording."
+msgstr "Texto de la insignia de escasez. {qty} se sustituye por la cantidad vendible. Déjelo vacío para usar el texto predeterminado."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_badge_critical_text
+msgid "Text used at or below the urgent threshold. {qty} is optional here: an urgent badge often names no number at all."
+msgstr "Texto usado al alcanzar o quedar por debajo del umbral urgente. Aquí {qty} es opcional: una insignia urgente a menudo no indica ninguna cifra."
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_badge_critical_text
+msgid "Urgent Badge Text"
+msgstr "Texto de la insignia urgente"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_critical_threshold
+msgid "Urgent Threshold"
+msgstr "Umbral urgente"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model,name:website_sale_low_stock_urgency.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.product_template_form_view_low_stock_threshold
+msgid "Website Low Stock Badge"
+msgstr "Insignia de stock bajo del sitio web"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model,name:website_sale_low_stock_urgency.model_product_public_category
+msgid "Website Product Category"
+msgstr "Categoría de producto del sitio web"
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "What it says"
+msgstr "Qué dice"
+
+#. module: website_sale_low_stock_urgency
+#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_critical_threshold
+msgid "When the sellable quantity is at or below this tighter number, the urgent text is used instead of the regular one. 0 keeps a single text for every badge."
+msgstr "Cuando la cantidad vendible sea igual o inferior a este número más estricto, se usa el texto urgente en lugar del habitual. 0 mantiene un único texto para todas las insignias."
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "When to show it"
+msgstr "Cuándo mostrarla"
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "e.g. Last few"
+msgstr "p. ej. Últimas unidades"
+
+#. module: website_sale_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+msgid "e.g. Only {qty} left"
+msgstr "p. ej. Solo quedan {qty}"
