@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_sale_low_stock_urgency
+#	* bs_low_stock_urgency
 #
 msgid ""
 msgstr ""
@@ -16,139 +16,139 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#. module: website_sale_low_stock_urgency
+#. module: bs_low_stock_urgency
 #. odoo-python
-#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+#: code:addons/bs_low_stock_urgency/models/low_stock.py:0
 msgid "%(qty)s %(uom)s in stock"
 msgstr "%(qty)s %(uom)s на складе"
 
-#. module: website_sale_low_stock_urgency
+#. module: bs_low_stock_urgency
 #. odoo-python
-#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+#: code:addons/bs_low_stock_urgency/models/low_stock.py:0
 msgid "%(qty)s in stock"
 msgstr "%(qty)s на складе"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_badge_text
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_badge_text
 msgid "Badge Text"
 msgstr "Текст значка"
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
 msgid "Low Stock Badge"
 msgstr "Значок низкого остатка"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_product__low_stock_threshold
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_public_category__low_stock_threshold
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_product_template__low_stock_threshold
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_public_category__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_product_template__low_stock_threshold
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_threshold
 msgid "Low Stock Threshold"
 msgstr "Порог низкого остатка"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.module.module,shortdesc:base.module_website_sale_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model:ir.module.module,shortdesc:base.module_bs_low_stock_urgency
 msgid "Low Stock Urgency Badges"
 msgstr "Значки нехватки товара"
 
-#. module: website_sale_low_stock_urgency
+#. module: bs_low_stock_urgency
 #. odoo-python
-#: code:addons/website_sale_low_stock_urgency/models/low_stock.py:0
+#: code:addons/bs_low_stock_urgency/models/low_stock.py:0
 msgid "Only %(qty)s %(uom)s left in stock."
 msgstr "Осталось всего %(qty)s %(uom)s на складе."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model,name:website_sale_low_stock_urgency.model_product_template
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_template
 msgid "Product"
 msgstr "Товар"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model,name:website_sale_low_stock_urgency.model_product_product
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_product
 msgid "Product Variant"
 msgstr "Вариант продукта"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model,name:website_sale_low_stock_urgency.model_sale_order_line
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Позиция заказа на продажу"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.module.module,summary:base.module_website_sale_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model:ir.module.module,summary:base.module_bs_low_stock_urgency
 msgid "Show a configurable scarcity badge on the product page, the shop grid and the cart when a variant's sellable quantity reaches a threshold."
 msgstr "Показывает настраиваемый значок дефицита на странице товара, в сетке магазина и в корзине, когда доступное количество варианта достигает порога."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_public_category__low_stock_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_public_category__low_stock_threshold
 msgid "Show the scarcity badge for products in this category when their sellable quantity is at or below this number. 0 passes the question to the parent category and then to the website."
 msgstr "Показывает значок дефицита для товаров этой категории, когда доступное количество равно или ниже этого числа. 0 передаёт решение родительской категории, а затем сайту."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_product__low_stock_threshold
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_product_template__low_stock_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_product__low_stock_threshold
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_product_template__low_stock_threshold
 msgid "Show the scarcity badge when this product's sellable quantity is at or below this number. 0 inherits the public category, which in turn inherits the website. The badge never appears for products whose stock is not tracked."
 msgstr "Показывает значок дефицита, когда доступное количество этого товара равно или ниже этого числа. 0 наследует публичную категорию, а та — настройку сайта. Для товаров без учёта запасов значок не показывается никогда."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_threshold
 msgid "Site-wide default for the scarcity badge. A product or its public category can set its own number; 0 here means the badge is off for products that do not set one."
 msgstr "Значение по умолчанию для всего сайта. Товар или его публичная категория могут задать своё число; 0 здесь означает, что для товаров без собственного значения значок не показывается."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_badge_text
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_badge_text
 msgid "Text of the scarcity badge. {qty} is replaced with the sellable quantity. Leave empty for the default wording."
 msgstr "Текст значка дефицита. {qty} заменяется на доступное количество. Оставьте пустым для текста по умолчанию."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_badge_critical_text
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_badge_critical_text
 msgid "Text used at or below the urgent threshold. {qty} is optional here: an urgent badge often names no number at all."
 msgstr "Текст, используемый при срочном пороге или ниже него. Здесь {qty} необязателен: срочный значок часто не называет числа."
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_badge_critical_text
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_badge_critical_text
 msgid "Urgent Badge Text"
 msgstr "Текст срочного значка"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,field_description:website_sale_low_stock_urgency.field_website__low_stock_critical_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,field_description:bs_low_stock_urgency.field_website__low_stock_critical_threshold
 msgid "Urgent Threshold"
 msgstr "Срочный порог"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model,name:website_sale_low_stock_urgency.model_website
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_website
 msgid "Website"
 msgstr "Сайт"
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.product_template_form_view_low_stock_threshold
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.product_template_form_view_low_stock_threshold
 msgid "Website Low Stock Badge"
 msgstr "Значок низкого остатка сайта"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model,name:website_sale_low_stock_urgency.model_product_public_category
+#. module: bs_low_stock_urgency
+#: model:ir.model,name:bs_low_stock_urgency.model_product_public_category
 msgid "Website Product Category"
 msgstr "Веб-сайт Категория продукта"
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
 msgid "What it says"
 msgstr "Что показывает"
 
-#. module: website_sale_low_stock_urgency
-#: model:ir.model.fields,help:website_sale_low_stock_urgency.field_website__low_stock_critical_threshold
+#. module: bs_low_stock_urgency
+#: model:ir.model.fields,help:bs_low_stock_urgency.field_website__low_stock_critical_threshold
 msgid "When the sellable quantity is at or below this tighter number, the urgent text is used instead of the regular one. 0 keeps a single text for every badge."
 msgstr "Когда доступное количество равно или ниже этого более строгого числа, используется срочный текст вместо обычного. 0 оставляет единый текст для всех значков."
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
 msgid "When to show it"
 msgstr "Когда показывать"
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
 msgid "e.g. Last few"
 msgstr "напр. Последние штуки"
 
-#. module: website_sale_low_stock_urgency
-#: model_terms:ir.ui.view,arch_db:website_sale_low_stock_urgency.view_website_form_low_stock_urgency
+#. module: bs_low_stock_urgency
+#: model_terms:ir.ui.view,arch_db:bs_low_stock_urgency.view_website_form_low_stock_urgency
 msgid "e.g. Only {qty} left"
 msgstr "напр. Осталось {qty}"
