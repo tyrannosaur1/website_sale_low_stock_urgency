@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The badge itself, in one place. `badge_source` is a product.product
+         or a sale.order.line; both answer `_low_stock_badge_values()`, so
+         the surfaces cannot disagree about the wording or the number.
+         Passed as an attribute, not a `t-set` in the body: body variables
+         stay in the caller's scope and never reach the called template. -->
+    <template id="low_stock_badge" name="Low Stock Badge">
+        <t t-set="badge_values" t-value="badge_source._low_stock_badge_values()"/>
+        <span t-if="badge_values['low_stock_badge_text']"
+              t-attf-class="o_wslsu_badge {{'o_wslsu_badge_critical' if badge_values['low_stock_badge_critical'] else ''}}"
+              t-att-data-low-stock-qty="badge_values['low_stock_badge_qty']"
+              role="status"
+              t-out="badge_values['low_stock_badge_text']"/>
+    </template>
+
+    <!-- Product page: right under the stock line. The stock module places
+         its placeholder before the CTA wrapper on 19.0, inside the product
+         template the stock view inherits. -->
+    <template id="product_low_stock_badge" inherit_id="website_sale.cta_wrapper"
+              name="Low Stock Badge on Product">
+        <xpath expr="//div[@id='o_wsale_cta_wrapper']" position="before">
+            <div t-if="combination_info.get('low_stock_badge_text')"
+                 class="o_wslsu_wrap small mb-2" role="note">
+                <span t-attf-class="o_wslsu_badge {{'o_wslsu_badge_critical' if combination_info.get('low_stock_badge_critical') else ''}}"
+                      t-att-data-low-stock-qty="combination_info.get('low_stock_badge_qty')"
+                      t-out="combination_info['low_stock_badge_text']"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Shop grid: under the product name on the tile. -->
+    <template id="products_item_low_stock_badge" inherit_id="website_sale.products_item"
+              name="Low Stock Badge on Tile">
+        <xpath expr="//*[hasclass('o_wsale_products_item_title')]" position="after">
+            <div class="o_wslsu_wrap mt-1">
+                <t t-set="badge_source" t-value="product"/>
+                <t t-call="website_sale_low_stock_urgency.low_stock_badge"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Cart: 19.0 has the quantity in its own template, rendered once for
+         desktop and once for mobile; the badge belongs to the desktop one. -->
+    <template id="cart_line_low_stock_badge" inherit_id="website_sale.cart_lines_quantity"
+              name="Low Stock Badge in Cart">
+        <xpath expr="//div[contains(@t-attf-class, 'css_quantity')]" position="after">
+            <div t-if="not is_mobile" class="o_wslsu_wrap mt-1 text-end">
+                <t t-set="badge_source" t-value="line"/>
+                <t t-call="website_sale_low_stock_urgency.low_stock_badge"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
