@@ -2,7 +2,7 @@
 
 Tell the shop when only a few are left: a configurable scarcity badge on the product page, the shop grid and the cart, measured on the quantity that can still be sold.
 
-Odoo 16.0 – 20.0. One branch per series, the branch name is the series.
+Odoo 10.0 – 20.0. One branch per series, the branch name is the series.
 
 ## What it does
 
